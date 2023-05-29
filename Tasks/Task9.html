@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form action="" novalidate>
+          <div class="in-grp">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="your name" />
+          </div>
+          <div class="in-grp">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="your email" />
+          </div>
+          <div class="in-grp">
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" />
+          </div>
+          <div class="in-grp">
+            <label for="phn">Phone Number:</label>
+            <input type="number" id="phn" />
+          </div>
+          <div class="in-grp">
+            <label for="phn">Gender:</label>
+            <label for="male" style="width: 70px;">Male</label>
+            <input type="checkbox" value="Male" id="male" />
+
+            <label for="female" style="width: 70px;">Female</label>
+            <input type="checkbox" value="Female" id="female" />
+
+            <label for="other" style="width: 70px;">Other</label>
+            <input type="checkbox" value="Other" id="other" />
+          </div>
+          <div class="in-grp">
+            <label for="lan">Language:</label>
+            <select id="lan">
+              <option value="def" selected>Select a language</option>
+              <option value="English">English</option>
+              <option value="Telugu">Telugu</option>
+              <option value="Hindi">Hindi</option>
+            </select>
+          </div>
+          <div class="in-grp">
+            <label for="zip">Zip Code:</label>
+            <input type="number" id="zip" />
+          </div>
+
+          <div class="in-grp">
+            <label for="abt">About:</label>
+            <textarea id="abt" placeholder="Write about yourself..."></textarea>
+          </div>
+          <input type="button" value="Register"" />
+        </form>
+      </div>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(202, 1, 91);
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        background-color: rgb(139, 0, 63);
+      }
+
+      .container form {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+      }
+
+      .in-grp {
+        margin: 10px 0;
+        display: flex;
+        gap: 15px;
+        width: 400px;
+      }
+
+      input[type="button"] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      label {
+        display: inline-block;
+        width: 200px;
+      }
+    </style>
+
+    <!--<script>
+        let form = document.querySelector("form");
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let website = document.getElementById("website");
+        let msg = document.getElementById("msg");
+  
+        let validate = () => {
+          if (name.value == "") {
+            document.getElementById("pname").innerHTML = "This field is required";
+            document.getElementById("pname").style.color = "red";
+            name.style.border = "1px solid red";
+          }
+          if (email.value == "") {
+            document.getElementById("pmail").innerHTML =
+              "A valid email address is required";
+            document.getElementById("pmail").style.color = "red";
+            email.style.border = "1px solid red";
+          }
+          if (website.value == "") {
+            document.getElementById("psite").innerHTML =
+              "A valid url is required";
+            document.getElementById("psite").style.color = "red";
+            website.style.border = "1px solid red";
+          }
+          if (msg.value == "") {
+            document.getElementById("pmsg").innerHTML = "This field is required";
+            document.getElementById("pmsg").style.color = "red";
+            msg.style.border = "1px solid red";
+          } else {
+            document.getElementById("pname").innerHTML = "";
+            document.getElementById("pmail").innerHTML = "";
+            document.getElementById("psite").innerHTML = "";
+            document.getElementById("pmsg").innerHTML = "";
+            name.style.border = "1px solid black";
+            email.style.border = "1px solid black";
+            website.style.border = "1px solid black";
+            msg.style.border = "1px solid black";
+          }
+        };
+    </script>-->
+  </body>
+</html>

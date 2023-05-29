@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task10</title>
+  </head>
+  <body>
+    <p>Open Console for Results</p>
+    <script>
+      //Array Methods
+      console.log("Array Methods:");
+
+      let arr = ["Apple", "Banana", "Orange"];
+
+      console.log("ForEach Method");
+      arr.forEach((val, ind) => {
+        console.log(val, "-", ind); //0-Apple, 1-Banana, 2-Orange
+      });
+
+      console.log("Map Method");
+      let newArr = arr.map((val, ind) => {
+        console.log(val, "-", ind); //0-Apple, 1-Banana, 2-Orange
+      });
+
+      let num = [10, 20, 30, 40, 50];
+
+      console.log("Every Method"); //Checks if every element follows condition
+      console.log(num.every((val) => val > 30)); //false
+
+      console.log("Some Method"); //Checks if any element follows condition
+      console.log(
+        num.some(function (val) {
+          return val > 30; //true
+        })
+      );
+
+      console.log("Filter Method"); //Returns elements following condition
+      console.log(num.filter((val) => val > 30)); //[40, 50]
+
+      console.log("Find Method");
+      console.log(num.find((val) => val == 10)); //returns 10, if not present gives undefined
+
+      console.log("Find Index Method");
+      console.log(num.findIndex((val) => val == 10)); //0
+
+      console.log("Push Method");
+      num.push(60);
+      console.log(num); //[10, 20, 30, 40, 50, 60]
+
+      console.log("Pop Method");
+      num.pop();
+      console.log(num); //[10, 20, 30, 40, 50]
+
+      console.log("Shift Method");
+      num.shift();
+      console.log(num); //[20, 30, 40, 50]
+
+      console.log("Unshift Method");
+      num.unshift(10);
+      console.log(num); //[10, 20, 30, 40, 50]
+
+      console.log("Splice Method");
+      num.splice(2, 0, 25);
+      console.log(num); //[10, 20, 25, 30, 40, 50]
+
+      console.log("Slice Method");
+      console.log(num.slice(2, 4)); //[25, 30]
+
+      console.log("Concat Method");
+      let num2 = [60, 70, 80];
+      console.log(num.concat(num2)); //[10, 20, 25, 30, 40, 50, 60, 70, 80]
+
+      console.log("Sort Method");
+      console.log(num.sort()); //[10, 20, 25, 30, 40, 50]
+
+      console.log("Reverse Method");
+      console.log(num.reverse()); //[50, 40, 30, 25, 20, 10]
+
+      console.log("Join Method");
+      console.log(num.join("")); //504030252010
+
+      console.log("Includes Method");
+      console.log(num.includes(30)); //true
+
+      console.log("IndexOf Method");
+      console.log(num.indexOf(30)); //2
+
+      console.log("LastIndexOf Method");
+      console.log(num.lastIndexOf(30)); //2
+
+      console.log("Fill Method");
+      console.log(num.fill(0)); //[0, 0, 0, 0, 0, 0]
+
+      //String Methods
+      console.log("String Methods:");
+
+      let str = "Hello World";
+      console.log("String: ", str);
+
+      console.log("Length Method");
+      console.log(str.length); //11
+
+      console.log("IndexOf Method");
+      console.log(str.indexOf("o")); //4
+
+      console.log("LastIndexOf Method");
+      console.log(str.lastIndexOf("o")); //7
+
+      console.log("Search Method");
+      console.log(str.search("o")); //4
+
+      console.log("Slice Method");
+      console.log(str.slice(2, 5)); //llo
+
+      console.log("Substring Method");
+      console.log(str.substring(2, 5)); //llo
+
+      console.log("Substr Method");
+      console.log(str.substr(2, 5)); //llo W
+
+      console.log("Replace Method");
+      console.log(str.replace("World", "Universe")); //Hello Universe
+
+      console.log("ToUpperCase Method");
+      console.log(str.toUpperCase()); //HELLO WORLD
+
+      console.log("ToLowerCase Method");
+      console.log(str.toLowerCase()); //hello world
+
+      console.log("Concat Method");
+      console.log(str.concat(" ", "Welcome")); //Hello World Welcome
+
+      console.log("Trim Method");
+      let str2 = "   Hello World   ";
+      console.log(str2.trim()); //Hello World
+
+      console.log("CharAt Method");
+      console.log(str.charAt(2)); //l
+
+      console.log("CharCodeAt Method");
+      console.log(str.charCodeAt(2)); //108
+
+      console.log("Split Method");
+      console.log(str.split(" ")); //[Hello, World]
+
+      console.log("Includes Method");
+      console.log(str.includes("World")); //true
+
+      console.log("StartsWith Method");
+      console.log(str.startsWith("Hello")); //true
+
+      console.log("EndsWith Method");
+      console.log(str.endsWith("World")); //true
+
+      console.log("Repeat Method");
+      console.log(str.repeat(2)); //Hello WorldHello World
+    </script>
+  </body>
+</html>

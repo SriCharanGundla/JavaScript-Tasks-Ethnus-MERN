@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+  </head>
+  <body>
+    <form>
+      <div class="in-grp">
+        <label for="num1">1st number:</label>
+        <input type="number" id="num1" />
+      </div>
+      <div class="in-grp">
+        <label for="num2">2nd number:</label>
+        <input type="number" id="num2" />
+      </div>
+      <div class="in-grp">
+        <button id="add" onclick="sum()">Add</button>
+        <button id="sub" onclick="subtract()">Subtract</button>
+        <button id="mul" onclick="multiply()">Multiply</button>
+        <button id="div" onclick="divide()">Divide</button>
+      </div>
+    </form>
+    <p id="res"></p>
+
+    <script>
+      let form = document.querySelector("form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // prevents form from submitting
+      });
+
+      function sum() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        if (num1 == "" || num2 == "") {
+          alert("Invalid inputs");
+          return;
+        }
+        let res = parseInt(num1) + parseInt(num2);
+        document.getElementById("res").innerHTML = "Result: " + res;
+      }
+
+      function subtract() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        if (num1 == "" || num2 == "") {
+          alert("Invalid inputs");
+          return;
+        }
+        let res = parseInt(num1) - parseInt(num2);
+        document.getElementById("res").innerHTML = "Result: " + res;
+      }
+
+      function multiply() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        if (num1 == "" || num2 == "") {
+          alert("Invalid inputs");
+          return;
+        }
+        let res = parseInt(num1) * parseInt(num2);
+        document.getElementById("res").innerHTML = "Result: " + res;
+      }
+
+      function divide() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        if (num1 == "" || num2 == "") {
+          alert("Invalid inputs");
+          return;
+        }
+        if (num2 == 0) {
+          alert("Cannot divide by 0");
+          return;
+        }
+        let res = parseInt(num1) / parseInt(num2);
+        document.getElementById("res").innerHTML = "Result: " + res;
+      }
+    </script>
+  </body>
+</html>
